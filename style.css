@@ -534,3 +534,87 @@ body {
   border-color: rgba(61, 64, 91, 0.3); /* 枠線の色も調整 */
   background-color: rgba(255, 255, 255, 0.2); /* 背景を少し調整 */
 }
+
+/* style.css の末尾に追加 */
+
+/* 13. Floating Action Button (FAB) */
+.fab {
+  position: fixed;
+  bottom: 85px; /* フッターナビゲーションの上 */
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+  background-color: var(--color-primary-dark);
+}
+
+/* style.css の末尾に追記 */
+
+/* 14. Stamp Card Page Styles */
+
+/* ヘッダーのロゴをリンクにしてもスタイルが崩れないように */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 認証フォームのスタイル */
+#profile-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+}
+#profile-form button[type="submit"] {
+  margin-top: 20px;
+}
+#auth-modal {
+  /* 閉じられないように設定 */
+  backdrop-filter: blur(5px);
+  background: rgba(0,0,0,0.6);
+}
+#auth-modal .modal-content {
+  /* 閉じられないので閉じるボタンは非表示 */
+  /* どうしても閉じたい場合は、ページリロードしかない */
+}
+
+/* ヘッダーのユーザー情報表示 */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+.user-info span {
+  font-weight: 600;
+}
+#reset-button {
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 6px 12px;
+  font-size: 12px;
+}
